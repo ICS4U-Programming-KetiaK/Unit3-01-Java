@@ -1,14 +1,36 @@
+import java.util.*;
+
 /**
-* Creating an empty constructor.
+* Program implements the push method.
 *
 * @author Ketia Gaelle Kaze
 * @version 1.0
 * @since 2022-04-25
 */
 
-class MyIntStack {
+public class MyIntStack {
     /**
-    * Creating an empty constructor.
+    * Declaring properties.
     */
-    public MyIntStack() { }
+    private Stack<Integer> _stack;
+
+    /**
+    * Creating a constructor.
+    */
+    public MyIntStack() {
+        _stack = new Stack<Integer>();
+
+    }
+
+    /**
+    * Creating a function that adds an integer to the stack.
+    *
+    * @param num passed
+    */
+
+    public void push(int num) {
+        _stack.push(num);
+        System.out.println("\n" + num + " added to the top of the stack.");
+        System.out.println("The size of the stack is " + _stack.size());
+    }
 }
